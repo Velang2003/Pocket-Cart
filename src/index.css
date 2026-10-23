@@ -38,6 +38,38 @@
     }
 }
 
-h1{
+.call-To-Action-Btn-Primary,
+.call-To-Action-Btn-Secondary {
+    width: 86px;
+    height: 41px;
+    border-radius: var(--radius-button);
+    background-color: var(--color-accent);
+    border: none;
+    font-size: var(--text-body);
+    font-family: var(--font-family);
+    font-weight: 500;
+    margin: 0 16px;
+}
 
+.call-To-Action-Btn-Secondary{
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-text);
+}
+
+.formLabel{
+    font-family: var(--font-family);
+    font-size: var(--text-caption);
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.formInput{
+    width: 320px;
+    height: 32px;
+    margin: 12px;
+    font-size: var(--text-body);
+    padding: 5px 17px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-button);
+    color: var(--color-text);
 }
