@@ -6,6 +6,10 @@ function App() {
       <h1>Hello World</h1>
       <Button props={"Primary"} />
       <FormInput />
+      <div className="productSearch">
+      <input type="text" name="search" id="search" placeholder="Search products, brands and categories" />
+      <button>Search</button>
+      </div>
     </>
   );
 }
