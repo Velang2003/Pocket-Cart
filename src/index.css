@@ -130,3 +130,34 @@
     height: inherit;
     width: 36px;
 }
+
+.radioOption{
+    display: flex;
+    width: 520px;
+    height: 68px;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    gap: var(--space-3);
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-caption);
+}
+
+.radioOption > div{
+    display: flex;
+    flex-direction: column;
+    width: 456px;
+    line-height: 0;
+}
+
+.radioOption .title{
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.radioOption .description{
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
