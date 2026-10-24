@@ -7,6 +7,7 @@ import RadioOption from "../components/ui/RadioOption";
 import NewIndicator from "../components/ui/NewIndicator";
 import ProductCard from "../features/products/ProductCard"
 import ProductFeedback from "../features/products/ProductFeedback";
+import CartProductCard from "../features/cart/CartProductCard";
 
 function App() {
   const product = {
@@ -30,6 +31,7 @@ function App() {
       <NewIndicator/>
       <ProductCard {...product}/>
       <ProductFeedback/>
+      <CartProductCard/>
     </>
   );
 }

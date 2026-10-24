@@ -6,7 +6,7 @@ interface ProductVarient {
   title: string,
   rating: number,
   reviewCount: number,
-  image: any,
+  image: string,
   realPrice: number,
   discountedPrice: number
 }
