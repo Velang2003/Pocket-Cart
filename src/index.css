@@ -38,6 +38,10 @@
     }
 }
 
+*{
+    font-family: var(--font-family);
+}
+
 .call-To-Action-Btn-Primary,
 .call-To-Action-Btn-Secondary {
     width: 86px;
@@ -46,7 +50,6 @@
     background-color: var(--color-accent);
     border: none;
     font-size: var(--text-body);
-    font-family: var(--font-family);
     font-weight: 500;
     margin: 0 16px;
 }
@@ -57,7 +60,6 @@
 }
 
 .formLabel{
-    font-family: var(--font-family);
     font-size: var(--text-caption);
     color: var(--color-text);
     font-weight: 600;
@@ -99,4 +101,71 @@
     border-radius: 16px;
     background-color: var(--color-primary);
     color: var(--color-surface);
+}
+
+.filterCheckbox{
+    font-size: var(--text-caption);
+}
+
+.productCount{
+    width: 110px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-button);
+    font-size: var(--text-body);
+}
+
+.productCount > p{
+    width: 36px;
+}
+
+.productCount button{
+    border: none;
+    border-radius: var(--radius-button);
+    background-color: var(--color-surface);
+    height: inherit;
+    width: 36px;
+}
+
+.radioOption{
+    display: flex;
+    width: 520px;
+    height: 68px;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    gap: var(--space-3);
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-caption);
+}
+
+.radioOption > div{
+    display: flex;
+    flex-direction: column;
+    width: 456px;
+    line-height: 0;
+}
+
+.radioOption .title{
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.radioOption .description{
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+.newIndicator{
+    font-size: var(--text-badge);
+    background-color: var(--color-surface-alt);
+    display: inline;
+    padding: 4px 8px;
+    font-weight: 500;
+    border-radius: var(--text-badge);
 }
