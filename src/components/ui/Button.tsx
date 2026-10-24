@@ -1,9 +1,10 @@
+type ButtonVarient = "Primary" | "Secondary" | "Ternary";
 
-function Button({props}:any) {
+function Button({varient}:{varient:ButtonVarient}) {
 
   return (
     // Primary | Secondary | normal
-    <button className={`call-To-Action-Btn-${props}`}>Button</button>
+    <button className={`call-To-Action-Btn-${varient}`}>Button</button>
   )
 }
 

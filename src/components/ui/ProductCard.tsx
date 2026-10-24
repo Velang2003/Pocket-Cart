@@ -47,7 +47,7 @@ export default function ProductCard({
               })}
             </p>
           </div>
-          <Button props="Ternary" />
+          <Button varient="Ternary" />
         </div>
       </div>
     </>

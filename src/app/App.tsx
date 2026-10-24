@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <h1>Hello World</h1>
-      <Button props={"Primary"} />
+      <Button varient={"Primary"} />
       <FormInput />
       <Search />
       <Checkbox />
