@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 
 function CounterBtn({count, handleClick}:any) {
   
@@ -7,7 +7,7 @@ function CounterBtn({count, handleClick}:any) {
       <button onClick={() => handleClick(event)} value={"-"}>
         -
       </button>
-      <p>{count}</p>
+      <p>{!count ? 0 : count}</p>
       <button onClick={() => handleClick(event)} value={"+"}>
         +
       </button>

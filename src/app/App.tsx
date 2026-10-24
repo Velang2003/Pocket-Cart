@@ -5,9 +5,10 @@ import Checkbox from "../components/ui/Checkbox";
 import CounterBtn from "../components/ui/CounterBtn";
 import RadioOption from "../components/ui/RadioOption";
 import NewIndicator from "../components/ui/NewIndicator";
-import ProductCard from "../features/products/ProductCard"
+import ProductCard from "../features/products/ProductCard";
 import ProductFeedback from "../features/products/ProductFeedback";
-import CartProductCard from "../features/cart/CartProductCard";
+import CartProductCard from "../features/cart/component/CartProductCard";
+import OrderSummery from "../features/orders/component/OrderSummery";
 
 function App() {
   const product = {
@@ -28,10 +29,11 @@ function App() {
       <Checkbox />
       <CounterBtn />
       <RadioOption />
-      <NewIndicator/>
-      <ProductCard {...product}/>
-      <ProductFeedback/>
-      <CartProductCard/>
+      <NewIndicator />
+      <ProductCard {...product} />
+      <ProductFeedback />
+      <CartProductCard />
+      <OrderSummery />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CounterBtn from "../../components/ui/CounterBtn";
+import CounterBtn from "../../../components/ui/CounterBtn";
 import "./CartProductCard.css"
 
 interface CartVariants {

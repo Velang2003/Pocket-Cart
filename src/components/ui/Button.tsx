@@ -1,11 +1,16 @@
-type ButtonVarient = "Primary" | "Secondary" | "Ternary";
-
-function Button({varient}:{varient:ButtonVarient}) {
-
-  return (
-    // Primary | Secondary | normal
-    <button className={`call-To-Action-Btn-${varient}`}>Button</button>
-  )
+type varient = "Primary" | "Secondary" | "Ternary";
+interface ButtonVarient {
+  varient: varient;
+  value: string;
 }
 
-export default Button
+function Button({ varient, value }: ButtonVarient) {
+  return (
+    // Primary | Secondary | normal
+    <button className={`call-To-Action-Btn-${varient}`}>
+      {!value ? "Button" : value}
+    </button>
+  );
+}
+
+export default Button;

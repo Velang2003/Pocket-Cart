@@ -16,7 +16,7 @@
 
 .CartProductCard > .CartDetails{
     display: flex;
-    line-height: 0;
+    /* line-height: 0; */
     flex-direction: column;
     font-size: var(--text-body);
 }
