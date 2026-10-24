@@ -100,3 +100,9 @@
     background-color: var(--color-primary);
     color: var(--color-surface);
 }
+
+.filterCheckbox{
+    font-size: var(--text-caption);
+    font-family: var(--font-family);
+
+}
