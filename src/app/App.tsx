@@ -4,6 +4,8 @@ import Search from "../components/ui/Search";
 import Checkbox from "../components/ui/Checkbox";
 import CounterBtn from "../components/ui/CounterBtn";
 import RadioOption from "../components/ui/RadioOption";
+import NewIndicator from "../components/ui/NewIndicator";
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
       <Checkbox />
       <CounterBtn />
       <RadioOption />
+      <NewIndicator/>
     </>
   );
 }

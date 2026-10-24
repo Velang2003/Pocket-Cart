@@ -161,3 +161,11 @@
     color: var(--color-text-muted);
 }
 
+.newIndicator{
+    font-size: var(--text-badge);
+    background-color: var(--color-surface-alt);
+    display: inline;
+    padding: 4px 8px;
+    font-weight: 500;
+    border-radius: var(--text-badge);
+}
