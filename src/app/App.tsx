@@ -5,6 +5,8 @@ import Checkbox from "../components/ui/Checkbox";
 import CounterBtn from "../components/ui/CounterBtn";
 import RadioOption from "../components/ui/RadioOption";
 import NewIndicator from "../components/ui/NewIndicator";
+import ProductCard from "../components/ui/ProductCard"
+import ProductFeedback from "../components/feedback/ProductFeedback";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <CounterBtn />
       <RadioOption />
       <NewIndicator/>
+      <ProductCard/>
+      <ProductFeedback/>
     </>
   );
 }
