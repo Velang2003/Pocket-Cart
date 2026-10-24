@@ -49,7 +49,7 @@ export default function ProductCard({
               })}
             </p>
           </div>
-          <Button varient="Ternary" />
+          <Button varient="Ternary" value="Add to cart"/>
         </div>
       </div>
     </>

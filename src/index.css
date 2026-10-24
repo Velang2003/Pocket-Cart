@@ -41,6 +41,9 @@
 
 *{
     font-family: var(--font-family);
+        margin: 0;
+            padding: 0;
+            box-sizing: border-box;
 }
 
 .call-To-Action-Btn-Primary,
@@ -96,7 +99,7 @@
 
 .productSearch > input{
     width: 400px;
-    height: 43px;
+    height: 42px;
     border-radius: inherit;
     border: none;
     font-size: var(--text-body);
@@ -135,7 +138,7 @@
     border: none;
     border-radius: var(--radius-button);
     background-color: var(--color-surface);
-    height: inherit;
+    height: 36px;
     width: 36px;
 }
 
@@ -156,7 +159,7 @@
     display: flex;
     flex-direction: column;
     width: 456px;
-    line-height: 0;
+    /* line-height: 0; */
 }
 
 .radioOption .title{
@@ -182,7 +185,7 @@
     width: 260px;
     /* height: 355px; */
     border: 1px solid var(--color-border);
-    line-height: 0.5;
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
     border-radius: var(--radius-card);
