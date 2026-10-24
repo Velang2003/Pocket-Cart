@@ -1,5 +1,5 @@
 import { useState } from "react";
-import StarRating from "./StarRating/StarRating"
+import StarRating from "../ui/StarRating/StarRating"
 
 export default function ProductFeedback() {
   const [rating, setRating] = useState(0);

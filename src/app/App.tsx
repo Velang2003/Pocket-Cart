@@ -6,7 +6,7 @@ import CounterBtn from "../components/ui/CounterBtn";
 import RadioOption from "../components/ui/RadioOption";
 import NewIndicator from "../components/ui/NewIndicator";
 import ProductCard from "../components/ui/ProductCard"
-import ProductFeedback from "../components/ui/ProductFeedback";
+import ProductFeedback from "../components/feedback/ProductFeedback";
 
 function App() {
   return (
