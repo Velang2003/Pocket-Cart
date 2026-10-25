@@ -10,6 +10,7 @@
 // import CartProductCard from "../features/cart/component/CartProductCard";
 // import OrderSummery from "../features/orders/component/OrderSummery";
 // import ProductFilter from "../features/products/components/filters/ProductFilter";
+import FooterLayout from "../components/layout/footer/FooterLayout";
 import HeaderLayout from "../components/layout/header/HeaderLayout";
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       <CartProductCard />
       <OrderSummery/> */}
       {/* <ProductFilter/> */}
-      <HeaderLayout/>
+      {/* <HeaderLayout/> */}
+      <FooterLayout/>
     </>
   );
 }

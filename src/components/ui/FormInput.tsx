@@ -1,14 +1,19 @@
-function FormInput() {
+interface formInputVarient{
+  placeholder: string,
+  label: string
+}
+
+function FormInput({label="default label", placeholder= "default placeholder"}:formInputVarient) {
   return (
     <>
-      <label htmlFor="name" className="formLabel">
-        Label
+      <label htmlFor={label} className="formLabel">
+        {label}
       </label>
       <input
         type="text"
-        name="name"
+        name={label}
         id="name"
-        placeholder="Placeholder"
+        placeholder={placeholder}
         className="formInput"
       />
     </>
