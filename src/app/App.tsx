@@ -9,7 +9,8 @@
 // import ProductFeedback from "../features/products/ProductFeedback";
 // import CartProductCard from "../features/cart/component/CartProductCard";
 // import OrderSummery from "../features/orders/component/OrderSummery";
-import ProductFilter from "../features/products/components/filters/ProductFilter";
+// import ProductFilter from "../features/products/components/filters/ProductFilter";
+import HeaderLayout from "../components/layout/header/HeaderLayout";
 
 function App() {
   const product = {
@@ -35,7 +36,8 @@ function App() {
       <ProductFeedback />
       <CartProductCard />
       <OrderSummery/> */}
-      <ProductFilter/>
+      {/* <ProductFilter/> */}
+      <HeaderLayout/>
     </>
   );
 }
