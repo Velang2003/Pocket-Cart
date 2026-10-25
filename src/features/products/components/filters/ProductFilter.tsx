@@ -1,6 +1,48 @@
 import "./ProductFilter.css"
 
+interface filerVarient {
+  category: string[];
+  price: {
+    min: number;
+    max: number;
+  };
+  brand: string[];
+  ratings: number[];
+}
+
 function ProductFilter() {
+    const dummyProduct: filerVarient = {
+      category: ["Headphones", "Speakers", "Smart Watches", "Cameras"],
+      price: { min: 0, max: 10000 },
+      brand: ["brand1", "brand2", "brand3"],
+      ratings: [5, 4, 3],
+    };
+
+    const categoryComponent = dummyProduct.category.map((category, index)=>{
+        return(
+            <label htmlFor={category} key={category}>
+                <input type="checkbox" name={category} id={category}/>
+                {category}
+            </label>
+        )
+    })
+    const brandComponent = dummyProduct.brand.map((brand, index)=>{
+        return(
+            <label htmlFor={brand} key={brand}>
+                <input type="checkbox" name={brand} id={brand}/>
+                {brand}
+            </label>
+        )
+    })
+    const ratingsComponent = dummyProduct.ratings.map((ratings, index) => {
+      return (
+        <label htmlFor={`${ratings}`} key={ratings}>
+          <input type="checkbox" name={`${ratings}`} id={`${ratings}`} />
+          {ratings} star rating and above
+        </label>
+      );
+    });
+
   return (
     <div className="productFilter">
       <div>
@@ -10,68 +52,40 @@ function ProductFilter() {
       <span></span>
       <div>
         <h4>Category</h4>
-        <label htmlFor="category1">
-          <input type="checkbox" name="category" id="category1" />
-          Headphones
-        </label>
-        <label htmlFor="category2">
-          <input type="checkbox" name="category" id="category2" />
-          Speakers
-        </label>
-        <label htmlFor="category3">
-          <input type="checkbox" name="category" id="category3" />
-          Smart Watches
-        </label>
-        <label htmlFor="category4">
-          <input type="checkbox" name="category" id="category4" />
-          Cameras
-        </label>
+        {categoryComponent}
       </div>
       <span></span>
       <div>
         <h4>Price</h4>
-        <input type="range" name="price" id="price" min={0} max={50000} />
-        <p>0 - 50000</p>
+        <input
+          type="range"
+          name="price"
+          id="price"
+          min={dummyProduct.price.min}
+          max={dummyProduct.price.max}
+          defaultValue={5000}
+        />
+        <p>
+          {dummyProduct.price.min.toLocaleString("en-IN", {
+            style: "currency",
+            currency: "INR",
+          })}{" "}
+          -{" "}
+          {dummyProduct.price.max.toLocaleString("en-IN", {
+            style: "currency",
+            currency: "INR",
+          })}
+        </p>
       </div>
       <span></span>
       <div>
         <h4>Brand</h4>
-        <label htmlFor="brand1">
-          <input type="checkbox" name="brand" id="brand1" />
-          Brand 1
-        </label>
-        <label htmlFor="brand2">
-          <input type="checkbox" name="brand" id="brand2" />
-          Brand 2
-        </label>
-        <label htmlFor="brand3">
-          <input type="checkbox" name="brand" id="brand3" />
-          brand 3
-        </label>
-        <label htmlFor="brand4">
-          <input type="checkbox" name="brand" id="brand4" />
-          brand 4
-        </label>
+        {brandComponent}
       </div>
       <span></span>
       <div>
         <h4>Rating</h4>
-        <label htmlFor="rating1">
-          <input type="checkbox" name="rating" id="rating1" />
-          Rating 1
-        </label>
-        <label htmlFor="rating2">
-          <input type="checkbox" name="rating" id="rating2" />
-          Rating 2
-        </label>
-        <label htmlFor="rating3">
-          <input type="checkbox" name="rating" id="rating3" />
-          Rating 3
-        </label>
-        <label htmlFor="rating4">
-          <input type="checkbox" name="rating" id="rating4" />
-          Rating 4
-        </label>
+        {ratingsComponent}
       </div>
     </div>
   );
