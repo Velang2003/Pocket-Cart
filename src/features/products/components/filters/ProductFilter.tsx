@@ -1,3 +1,4 @@
+import "./ProductFilter.css"
 
 function ProductFilter() {
   return (
