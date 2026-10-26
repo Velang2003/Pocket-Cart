@@ -1,0 +1,68 @@
+.footor{
+    background-color: var(--color-primary);
+    color: var(--color-border);
+    font-size: var(--text-small);
+    flex-direction: column;
+    height: 273px;
+    justify-self: space-between;
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.footor > div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footor > div:first-child{
+    height: 217px;
+    align-items: center;
+    border-bottom: 1px solid var(--color-text-muted);
+}
+
+
+.footor > div:first-child > .contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact{
+    height: 94px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact > div > label{
+    color: var(--color-border);
+    display: flex;
+}
+
+.contact > .FormInput > input{
+    width: 175px;
+    margin: 0;
+    height: 40px;
+}
+.contact > .FormInput > button{
+    margin: 5px;
+}
+
+.footor > div:nth-child(2){
+    align-items: center;
+    color: var(--color-text-muted);
+    height: 55px;
+}
+
+.footor > div:first-child > div{
+    height: 121px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footor > div:first-child > div > p{
+    font-weight: 300;
+}
