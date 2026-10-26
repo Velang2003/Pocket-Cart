@@ -1,14 +1,29 @@
-type varient = "Primary" | "Secondary" | "Ternary";
-interface ButtonVarient {
-  varient: varient;
-  value: string;
+type Variant = "primary" | "secondary" | "cta";
+
+interface ButtonProps {
+  variant: Variant;
+  label?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  loading?: boolean;
+  fullWidth?: boolean;
 }
 
-function Button({ varient, value }: ButtonVarient) {
+function Button({
+  variant,
+  label = "Button",
+  onClick,
+  disabled = false,
+  loading = false,
+  fullWidth = false,
+}: ButtonProps) {
   return (
-    // Primary | Secondary | normal
-    <button className={`call-To-Action-Btn-${varient}`}>
-      {!value ? "Button" : value}
+    <button
+      className={`btn btn-${variant}${fullWidth ? " btn-full" : ""}`}
+      onClick={onClick}
+      disabled={disabled || loading}
+    >
+      {loading ? "Loading..." : label}
     </button>
   );
 }
