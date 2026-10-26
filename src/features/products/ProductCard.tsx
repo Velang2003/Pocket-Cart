@@ -1,57 +1,59 @@
 import Button from "../../components/ui/Button";
-import StarRating from "../../components/ui/StarRating/StarRating";
+import Rating from "../../components/ui/Rating/Rating";
 
-interface ProductVarient {
-  brand: string,
-  title: string,
-  rating: number,
-  reviewCount: number,
-  image: string,
-  realPrice: number,
-  discountedPrice: number
+interface Product {
+  brand: string;
+  title: string;
+  rating: number;
+  reviewCount: number;
+  image: string;
+  realPrice: number;
+  discountedPrice: number;
 }
 
-export default function ProductCard({
-  brand = "brand",
-  title = "Product name goes here",
-  rating = 2.5,
-  reviewCount = 128,
-  image = "https://placehold.co/258x200",
-  realPrice = 1999,
-  discountedPrice = 1299
-}:ProductVarient) {
- 
+interface ProductCardProps {
+  product?: Product;
+  onAdd?: (product: Product) => void;
+}
 
+const DEFAULT_PRODUCT: Product = {
+  brand: "Brand",
+  title: "Product name goes here",
+  rating: 2.5,
+  reviewCount: 128,
+  image: "https://placehold.co/258x200",
+  realPrice: 1999,
+  discountedPrice: 1299,
+};
+
+function ProductCard({ product = DEFAULT_PRODUCT, onAdd }: ProductCardProps) {
   return (
-    <>
-      <div className="productCard">
-        <img src={image} alt={brand} />
-        <div>
-          <p>{brand}</p>
-          <p>{title}</p>
-          <div className="rating">
-            <StarRating rating={rating} readOnly size={12} />
-            <span> 
-              {rating} ({reviewCount})
-            </span>
-          </div>
-          <div className="productPrice">
-            <p>
-              {discountedPrice.toLocaleString("en-IN", {
-                style: "currency",
-                currency: "INR",
-              })}
-            </p>
-            <p>
-              {realPrice.toLocaleString("en-IN", {
-                style: "currency",
-                currency: "INR",
-              })}
-            </p>
-          </div>
-          <Button varient="Ternary" value="Add to cart"/>
+    <div className="productCard">
+      <img src={product.image} alt={product.brand} />
+      <div>
+        <p>{product.brand}</p>
+        <p>{product.title}</p>
+        <div className="rating">
+          <Rating value={product.rating} count={product.reviewCount} readOnly size={12} />
         </div>
+        <div className="productPrice">
+          <p>
+            {product.discountedPrice.toLocaleString("en-IN", {
+              style: "currency",
+              currency: "INR",
+            })}
+          </p>
+          <p>
+            {product.realPrice.toLocaleString("en-IN", {
+              style: "currency",
+              currency: "INR",
+            })}
+          </p>
+        </div>
+        <Button variant="cta" label="Add to cart" onClick={() => onAdd?.(product)} />
       </div>
-    </>
+    </div>
   );
 }
+
+export default ProductCard;

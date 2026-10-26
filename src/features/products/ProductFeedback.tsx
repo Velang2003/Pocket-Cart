@@ -1,5 +1,5 @@
 import { useState } from "react";
-import StarRating from "../../components/ui/StarRating/StarRating"
+import Rating from "../../components/ui/Rating/Rating";
 
 export default function ProductFeedback() {
   const [rating, setRating] = useState(0);
@@ -9,8 +9,6 @@ export default function ProductFeedback() {
       alert("Please select a rating");
       return;
     }
-
-    // Submit rating with your feedback
     console.log("Selected rating:", rating);
   }
 
@@ -18,8 +16,8 @@ export default function ProductFeedback() {
     <div>
       <h3>Rate this product</h3>
 
-      <StarRating
-        rating={rating}
+      <Rating
+        value={rating}
         readOnly={false}
         onRatingChange={setRating}
         size={28}

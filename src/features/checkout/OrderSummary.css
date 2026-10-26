@@ -1,0 +1,57 @@
+.orderSummary{
+    width: 360px;
+    height: 300px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-badge);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    font-size: var(--text-body);
+}
+
+.orderSummary>h4{
+    color: var(--color-text);
+    margin: 0 0 5px;
+    font-size: var(--text-section);
+}
+
+.orderSummary > p{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.orderSummary > span{
+    border-bottom: 1px solid var(--color-border);
+    margin: 5px 0;
+}
+
+
+.orderSummary > p:nth-child(6){
+    font-size: var(--text-product-price);
+    font-weight: 700;
+}
+
+.orderSummary > div{
+    width: 318px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderSummary > div > input{
+    width: 228px;
+    border-radius: var(--radius-button);
+    border: 1px solid var(--color-border);
+    padding: 0 15px;
+}
+
+.orderSummary>div>button{
+    margin: 0 0 0 5px;
+}
+
+.orderSummary>button{
+    width: 318px;
+    margin: 0;
+    height: 41px;
+}

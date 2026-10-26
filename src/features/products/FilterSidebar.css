@@ -1,0 +1,53 @@
+.productFilter {
+  width: 260px;
+  height: 563px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  font-size: var(--text-body);
+  border-radius: var(--radius-card);
+  scrollbar-width: none;
+}
+
+.productFilter > h3 {
+  font-size: var(--text-product-price);
+}
+
+.productFilter > span {
+  border-bottom: 1px solid var(--color-border);
+  margin: 20px 0;
+}
+
+.productFilter > div > h4 {
+  font-size: var(--text-small);
+  font-weight: 500;
+}
+
+.productFilter > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.productFilter > div > label{
+    margin: 10px 0 0;
+}
+
+.productFilter > div > label > input{
+    margin: 0 10px 0 0;
+
+}
+
+.productFilter > div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productFilter > div:first-child > button{
+    border: none;
+    background-color: var(--color-surface);
+    color: var(--color-accent);
+    font-weight: 400;
+}
