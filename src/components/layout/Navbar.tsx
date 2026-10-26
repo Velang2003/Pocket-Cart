@@ -40,3 +40,4 @@ function Navbar({ cartCount = 0 }: NavbarProps) {
 }
 
 export default Navbar;
+

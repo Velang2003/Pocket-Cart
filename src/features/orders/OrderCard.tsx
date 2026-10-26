@@ -73,3 +73,4 @@ function OrderCard({ order = DEFAULT_ORDER }: OrderCardProps) {
 }
 
 export default OrderCard;
+

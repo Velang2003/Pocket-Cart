@@ -10,3 +10,4 @@ function Badge({ label = "New", tone = "neutral" }: BadgeProps) {
 }
 
 export default Badge;
+

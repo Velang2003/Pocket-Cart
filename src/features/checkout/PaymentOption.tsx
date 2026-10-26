@@ -32,3 +32,4 @@ function PaymentOption({ method = "upi", onChange }: PaymentOptionProps) {
 }
 
 export default PaymentOption;
+

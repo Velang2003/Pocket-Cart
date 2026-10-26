@@ -17,3 +17,4 @@ function SectionHeader({ title = "Section title", linkTo }: SectionHeaderProps) 
 }
 
 export default SectionHeader;
+

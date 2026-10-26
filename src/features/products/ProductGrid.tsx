@@ -49,3 +49,4 @@ function ProductGrid({ products = DUMMY_PRODUCTS, view = "grid" }: ProductGridPr
 }
 
 export default ProductGrid;
+

@@ -18,7 +18,7 @@ const TABS: Tab[] = [
   { id: "account", label: "Account" },
 ];
 
-function TabBar({ activeTab = "home", onTabChange }: TabBarProps) {
+function MobileTabBar({ activeTab = "home", onTabChange }: TabBarProps) {
   return (
     <nav className="tabBar" aria-label="Bottom navigation">
       {TABS.map((tab) => (
@@ -35,4 +35,4 @@ function TabBar({ activeTab = "home", onTabChange }: TabBarProps) {
   );
 }
 
-export default TabBar;
+export default MobileTabBar;

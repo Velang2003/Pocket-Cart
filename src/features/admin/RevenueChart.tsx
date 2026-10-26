@@ -40,3 +40,4 @@ function RevenueChart({ data = DEFAULT_DATA }: RevenueChartProps) {
 }
 
 export default RevenueChart;
+

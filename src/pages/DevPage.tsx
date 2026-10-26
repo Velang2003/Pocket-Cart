@@ -20,10 +20,10 @@ import SectionHeader from "../components/ui/SectionHeader";
 // Layout
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import AppBar from "../components/layout/AppBar";
-import BackBar from "../components/layout/BackBar";
-import TabBar from "../components/layout/TabBar";
-import StickyBar from "../components/layout/StickyBar";
+import MobileAppBar from "../components/layout/MobileAppBar";
+import MobileBackBar from "../components/layout/MobileBackBar";
+import MobileTabBar from "../components/layout/MobileTabBar";
+import MobileStickyBar from "../components/layout/MobileStickyBar";
 
 // Features › Products
 import ProductCard from "../features/products/ProductCard";
@@ -196,19 +196,19 @@ export default function DevPage() {
         </div>
         <div style={{ width: 390, border: "1px solid #e5e7eb" }}>
           <p style={{ fontSize: 12, color: "#6b7280" }}>AppBar (mobile)</p>
-          <AppBar cartCount={3} />
+          <MobileAppBar cartCount={3} />
         </div>
         <div style={{ width: 390, border: "1px solid #e5e7eb" }}>
           <p style={{ fontSize: 12, color: "#6b7280" }}>BackBar (mobile)</p>
-          <BackBar title="Product details" rightLabel="Cart" />
+          <MobileBackBar title="Product details" rightLabel="Cart" />
         </div>
         <div style={{ width: 390, border: "1px solid #e5e7eb" }}>
           <p style={{ fontSize: 12, color: "#6b7280" }}>TabBar (mobile)</p>
-          <TabBar />
+          <MobileTabBar />
         </div>
         <div style={{ width: 390, border: "1px solid #e5e7eb" }}>
           <p style={{ fontSize: 12, color: "#6b7280" }}>StickyBar (mobile)</p>
-          <StickyBar />
+          <MobileStickyBar />
         </div>
         <div style={{ width: "100%", marginTop: 16 }}>
           <p style={{ fontSize: 12, color: "#6b7280" }}>Footer</p>
@@ -318,3 +318,4 @@ export default function DevPage() {
     </div>
   );
 }
+

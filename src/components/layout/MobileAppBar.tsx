@@ -6,7 +6,7 @@ interface AppBarProps {
   cartCount?: number;
 }
 
-function AppBar({ cartCount = 0 }: AppBarProps) {
+function MobileAppBar({ cartCount = 0 }: AppBarProps) {
   return (
     <header className="appBar">
       <img src={PrimaryLogo} alt="Pocket Cart" className="appBar__logo" />
@@ -18,4 +18,4 @@ function AppBar({ cartCount = 0 }: AppBarProps) {
   );
 }
 
-export default AppBar;
+export default MobileAppBar;

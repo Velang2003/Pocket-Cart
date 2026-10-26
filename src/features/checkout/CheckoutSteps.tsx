@@ -30,3 +30,4 @@ function CheckoutSteps({ current = "cart" }: CheckoutStepsProps) {
 }
 
 export default CheckoutSteps;
+

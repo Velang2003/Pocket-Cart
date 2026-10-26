@@ -6,7 +6,7 @@ interface BackBarProps {
   onRight?: () => void;
 }
 
-function BackBar({ title = "Title", onBack, rightLabel, onRight }: BackBarProps) {
+function MobileBackBar({ title = "Title", onBack, rightLabel, onRight }: BackBarProps) {
   return (
     <header className="backBar">
       <button className="backBar__back" onClick={onBack} aria-label="Go back">
@@ -22,4 +22,4 @@ function BackBar({ title = "Title", onBack, rightLabel, onRight }: BackBarProps)
   );
 }
 
-export default BackBar;
+export default MobileBackBar;

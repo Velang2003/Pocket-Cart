@@ -48,3 +48,4 @@ function Pagination({ page = 1, totalPages = 12, onChange }: PaginationProps) {
 }
 
 export default Pagination;
+

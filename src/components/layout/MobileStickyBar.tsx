@@ -7,7 +7,7 @@ interface StickyBarProps {
   disabled?: boolean;
 }
 
-function StickyBar({ onAddToCart, onBuyNow, disabled = false }: StickyBarProps) {
+function MobileStickyBar({ onAddToCart, onBuyNow, disabled = false }: StickyBarProps) {
   return (
     <div className="stickyBar">
       <Button
@@ -28,4 +28,4 @@ function StickyBar({ onAddToCart, onBuyNow, disabled = false }: StickyBarProps) 
   );
 }
 
-export default StickyBar;
+export default MobileStickyBar;
