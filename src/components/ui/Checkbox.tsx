@@ -1,12 +1,29 @@
+interface CheckboxProps {
+  label: string;
+  checked?: boolean;
+  onChange?: (checked: boolean) => void;
+  disabled?: boolean;
+}
 
-
-function Checkbox() {
+function Checkbox({
+  label,
+  checked = false,
+  onChange,
+  disabled = false,
+}: CheckboxProps) {
   return (
-    <label htmlFor="option1" className="filterCheckbox">
-      <input type="checkbox" name="option1" id="option1" />
-      Option
+    <label htmlFor={label} className="filterCheckbox">
+      <input
+        type="checkbox"
+        id={label}
+        name={label}
+        checked={checked}
+        disabled={disabled}
+        onChange={(e) => onChange?.(e.target.checked)}
+      />
+      {label}
     </label>
   );
 }
 
-export default Checkbox
+export default Checkbox;
