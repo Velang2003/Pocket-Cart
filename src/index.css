@@ -897,3 +897,123 @@
     color: var(--color-text-muted);
     margin-left: var(--space-1);
 }
+
+/* ── Admin Layout ─────────────────────────────── */
+.adminLayout {
+    display: flex;
+    min-height: 100vh;
+}
+.adminLayout__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.adminLayout__content {
+    flex: 1;
+    padding: var(--space-5);
+    background-color: var(--color-surface-soft);
+    overflow-y: auto;
+}
+
+.adminSidebar {
+    width: 240px;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-5) 0;
+    flex-shrink: 0;
+}
+.adminSidebar__brand {
+    font-size: var(--text-section);
+    font-weight: 700;
+    padding: 0 var(--space-5) var(--space-5);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: var(--space-3);
+}
+.adminSidebar__link {
+    display: block;
+    padding: var(--space-3) var(--space-5);
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: var(--text-body);
+    font-weight: 500;
+    transition: background 0.15s;
+}
+.adminSidebar__link:hover {
+    background-color: rgba(255,255,255,0.08);
+    color: var(--color-surface);
+}
+.adminSidebar__link--active {
+    background-color: rgba(255,255,255,0.15);
+    color: var(--color-surface);
+}
+
+.adminTopBar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-5);
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-shrink: 0;
+}
+.adminTopBar__title {
+    font-size: var(--text-product-price);
+    font-weight: 700;
+    color: var(--color-text);
+}
+.adminTopBar__user {
+    font-size: var(--text-body);
+    color: var(--color-text-muted);
+}
+
+/* ── PublicLayout main ────────────────────────── */
+main {
+    min-height: 60vh;
+}
+
+/* ── Skeleton ─────────────────────────────────── */
+@keyframes shimmer {
+    0%   { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--color-surface-alt) 25%,
+        var(--color-surface-soft) 50%,
+        var(--color-surface-alt) 75%
+    );
+    background-size: 800px 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+    display: block;
+}
+
+/* ── EmptyState / ErrorState ─────────────────── */
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6) var(--space-4);
+    gap: var(--space-3);
+    text-align: center;
+    min-height: 320px;
+}
+.emptyState__icon {
+    font-size: 48px;
+    line-height: 1;
+}
+.emptyState__title {
+    font-size: var(--text-section);
+    font-weight: 700;
+    color: var(--color-text);
+}
+.emptyState__message {
+    font-size: var(--text-body);
+    color: var(--color-text-muted);
+    max-width: 360px;
+}

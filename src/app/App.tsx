@@ -1,13 +1,19 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import PublicLayout from "../components/layout/PublicLayout";
 import DevPage from "../pages/DevPage";
+import HomePage from "../pages/HomePage";
 
 function App() {
   return (
     <Routes>
-      {/* Redirect root to /dev while building */}
-      <Route path="/" element={<Navigate to="/dev" replace />} />
+      {/* Public routes wrapped in Navbar + Footer */}
+      <Route element={<PublicLayout />}>
+        <Route path="/" element={<HomePage />} />
+        {/* Phase 4+ pages go here */}
+      </Route>
+
+      {/* Dev component showcase — no layout wrapper */}
       <Route path="/dev" element={<DevPage />} />
-      {/* Future routes go here */}
     </Routes>
   );
 }

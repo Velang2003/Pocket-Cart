@@ -1,43 +1,42 @@
+import { Link } from "react-router-dom";
 import SearchBar from "../ui/SearchBar";
-import Button from "../ui/Button";
 import Badge from "../ui/Badge";
 import PrimaryLogo from "../../assets/Pocket_Cart_Logo_Primary.png";
+import { useCartStore } from "../../stores/cartStore";
 import "./Navbar.css";
 
-interface NavbarProps {
-  cartCount?: number;
-}
+function Navbar() {
+  const totalItems = useCartStore((s) => s.totalItems());
 
-function Navbar({ cartCount = 0 }: NavbarProps) {
   return (
     <section className="header">
       <div>
-        <img className="primaryLogo" src={PrimaryLogo} alt="Pocket Cart Logo" />
+        <Link to="/">
+          <img className="primaryLogo" src={PrimaryLogo} alt="Pocket Cart Logo" />
+        </Link>
         <SearchBar />
         <div className="navLinks">
-          <p>Deals</p>
-          <p>Orders</p>
-          <p>Account</p>
-          <div className="cartNav">
+          <Link to="/deals">Deals</Link>
+          <Link to="/account/orders">Orders</Link>
+          <Link to="/account">Account</Link>
+          <Link to="/cart" className="cartNav">
             <span>Cart</span>
-            <Badge label={`${cartCount}`} tone="neutral" />
-          </div>
+            <Badge label={`${totalItems}`} tone="neutral" />
+          </Link>
         </div>
       </div>
       <div className="topCategories">
-        <p>All Categories ↓</p>
-        <p>Electronics</p>
-        <p>Fashion</p>
-        <p>Home &amp; Kitchen</p>
-        <p>Beauty</p>
-        <p>Grocery</p>
-        <p>Sports</p>
-        <p>Books</p>
-        <p>Deals</p>
+        <Link to="/products">All Categories ↓</Link>
+        <Link to="/products?category=electronics">Electronics</Link>
+        <Link to="/products?category=mens-shirts">Fashion</Link>
+        <Link to="/products?category=furniture">Home &amp; Kitchen</Link>
+        <Link to="/products?category=beauty">Beauty</Link>
+        <Link to="/products?category=groceries">Grocery</Link>
+        <Link to="/products?category=sports-accessories">Sports</Link>
+        <Link to="/products?category=vehicle">Deals</Link>
       </div>
     </section>
   );
 }
 
 export default Navbar;
-

@@ -34,3 +34,24 @@
     margin: 0 10px;
 }
 
+
+.header a {
+    text-decoration: none;
+    color: inherit;
+}
+.header .navLinks a {
+    color: var(--color-text);
+    font-size: var(--text-body);
+}
+.header .topCategories a {
+    color: var(--color-text);
+    font-size: var(--text-body);
+    margin: 0 10px;
+    line-height: 36px;
+}
+.cartNav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    text-decoration: none;
+}
